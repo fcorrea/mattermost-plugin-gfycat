@@ -1,0 +1,9 @@
+{
+    "id": "gfycat",
+    "name": "Gfycat",
+    "description": "Gfycat plugin for Mattermost 5.2+.",
+    "version": "0.0.1",
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    }
+}
