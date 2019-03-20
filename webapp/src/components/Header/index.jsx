@@ -9,8 +9,8 @@ import {saveSearchBarText, searchTextUpdate} from 'mattermost-redux/actions/gifs
 import {getTheme} from 'mattermost-redux/selectors/entities/preferences';
 import {changeOpacity, makeStyleFromTheme} from 'mattermost-redux/utils/theme_utils';
 
-import constants from 'components/gif_picker/utils/constants';
-import SearchBar from 'components/gif_picker/components/SearchBar';
+import constants from '../../utils/constants';
+import SearchBar from '../../components/SearchBar';
 import GifTrendingIcon from 'components/svg/gif_trending_icon';
 import GifReactionsIcon from 'components/svg/gif_reactions_icon';
 import './Header.scss';
