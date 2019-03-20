@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-import App from 'components/gif_picker/components/App';
-import Categories from 'components/gif_picker/components/Categories';
-import Search from 'components/gif_picker/components/Search';
-import Trending from 'components/gif_picker/components/Trending';
-import constants from 'components/gif_picker/utils/constants';
+import App from '../../components/App';
+import Categories from '../../components/Categories';
+import Search from '../../components/Search';
+import Trending from '../../components/Trending';
+import constants from '../../utils/constants';
 
 export const appProps = {
     appName: constants.appName.mattermost,
