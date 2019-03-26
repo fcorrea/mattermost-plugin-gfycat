@@ -9,10 +9,8 @@ import {saveSearchScrollPosition} from 'mattermost-redux/actions/gifs';
 import {getTheme} from 'mattermost-redux/selectors/entities/preferences';
 import {changeOpacity, makeStyleFromTheme} from 'mattermost-redux/utils/theme_utils';
 
-import {trackEvent} from 'actions/diagnostics_actions.jsx';
-
-import InfiniteScroll from '../../components/InfiniteScroll';
-import SearchItem from '../../components/SearchItem';
+import InfiniteScroll from '../InfiniteScroll';
+import SearchItem from '../SearchItem';
 
 import './SearchGrid.scss';
 
@@ -116,7 +114,8 @@ export class SearchGrid extends PureComponent {
         const {keyword, handleItemClick} = this.props;
         this.props.saveSearchScrollPosition(this.scrollPosition);
 
-        trackEvent('gfycat', 'shares', {gfyid: gfyItem.gfyId, keyword});
+        // FIXME: find a way to track events w/o diagnostics_actions.jsx
+        // trackEvent('gfycat', 'shares', {gfyid: gfyItem.gfyId, keyword});
         handleItemClick(gfyItem);
     }
 

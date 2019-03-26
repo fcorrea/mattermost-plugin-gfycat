@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 import './SearchItem.scss';
-import * as PostUtils from '../../utils/post_utils.jsx';
+import getImageSrc from '../../utils/post_utils.js';
 
 function mapStateToProps(state) {
     return {
@@ -36,7 +36,7 @@ export class SearchItem extends PureComponent {
 
         const {width, height, max1mbGif, avgColor} = gfyItem;
         const {hasImageProxy} = this.props;
-        const url = PostUtils.getImageSrc(max1mbGif, hasImageProxy === 'true');
+        const url = getImageSrc(max1mbGif, hasImageProxy === 'true');
 
         const backgroundImage = {backgroundImage: `url(${url})`};
         const backgroundColor = {backgroundColor: avgColor};

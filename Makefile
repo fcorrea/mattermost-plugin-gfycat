@@ -14,7 +14,7 @@ dist: build
 	rm -rf dist
 	mkdir -p dist/gfycat/webapp/dist
 	cp plugin.json dist/gfycat/
-	cp webapp/dist/* dist/gfycat/webapp/dist/
+	cp -r webapp/dist/* dist/gfycat/webapp/dist/
 	cd dist && tar czf $(PLUGIN_ID)-$(PLUGIN_VERSION).tar.gz gfycat
 
 .PHONY: clean

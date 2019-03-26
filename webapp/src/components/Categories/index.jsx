@@ -9,10 +9,8 @@ import {requestCategoriesList, requestCategoriesListIfNeeded, saveSearchBarText,
 import {getTheme} from 'mattermost-redux/selectors/entities/preferences';
 import {changeOpacity, makeStyleFromTheme} from 'mattermost-redux/utils/theme_utils';
 
-import {trackEvent} from 'actions/diagnostics_actions.jsx';
-import * as PostUtils from 'utils/post_utils.jsx';
-
 import InfiniteScroll from '../InfiniteScroll';
+import getImageSrc from '../../utils/post_utils.js';
 
 import './Categories.scss';
 
@@ -74,9 +72,10 @@ export class Categories extends PureComponent {
             return {gfyId: tag.gfyId};
         });
 
+        /* FIXME: find a way to track events w/o diagnostics_actions.jsx
         if (gfycats.length) {
             trackEvent('gfycat', 'views', {context: 'category_list', count: gfycats.length});
-        }
+        }*/
     }
 
     componentWillUnmount() {
@@ -113,7 +112,7 @@ export class Categories extends PureComponent {
 
             const gfyItem = gifs[gfyId];
             const {max1mbGif, avgColor} = gfyItem;
-            const url = PostUtils.getImageSrc(max1mbGif, hasImageProxy === 'true');
+            const url = getImageSrc(max1mbGif, hasImageProxy === 'true');
             const searchText = tagName.replace(/\s/g, '-');
             const backgroundImage = {backgroundImage: `url(${url}`};
             const backgroundColor = {backgroundColor: avgColor};

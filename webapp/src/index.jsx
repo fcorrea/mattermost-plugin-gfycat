@@ -2,15 +2,16 @@ import React from 'react';
 
 
 import GfycatIcon from './components/svg/gfycat_icon.jsx';
+import GifPicker from './gif_picker.jsx';
 
 
 class Plugin {
     initialize(registry, store) {
         registry.registerEmojiPickerTabAction(
             <GfycatIcon />,
-            () => {
-                alert("Hello World!");
-            },
+            <GifPicker
+              onGifClick={this.props.onGifClick}
+            />,
         );
     }
 }
