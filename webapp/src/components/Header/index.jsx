@@ -10,9 +10,9 @@ import {getTheme} from 'mattermost-redux/selectors/entities/preferences';
 import {changeOpacity, makeStyleFromTheme} from 'mattermost-redux/utils/theme_utils';
 
 import constants from '../../utils/constants';
-import SearchBar from '../../components/SearchBar';
-import GifTrendingIcon from 'components/svg/gif_trending_icon';
-import GifReactionsIcon from 'components/svg/gif_reactions_icon';
+import SearchBar from '../SearchBar';
+import GifTrendingIcon from '../svg/gif_trending_icon';
+import GifReactionsIcon from '../svg/gif_reactions_icon';
 import './Header.scss';
 
 function mapStateToProps(state) {

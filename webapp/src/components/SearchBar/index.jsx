@@ -9,9 +9,9 @@ import {saveSearchScrollPosition, saveSearchBarText, searchTextUpdate} from 'mat
 import {getTheme} from 'mattermost-redux/selectors/entities/preferences';
 import {changeOpacity, makeStyleFromTheme} from 'mattermost-redux/utils/theme_utils';
 
-import GifSearchIcon from 'components/svg/gif_search_icon';
-import GifSearchClearIcon from 'components/svg/gif_search_clear_icon';
-import LocalizedInput from 'components/localized_input/localized_input';
+import GifSearchIcon from '../svg/gif_search_icon';
+import GifSearchClearIcon from '../svg/gif_search_clear_icon';
+import LocalizedInput from '../../utils/localized_input';
 
 import './SearchBar.scss';
 

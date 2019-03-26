@@ -12,7 +12,7 @@ import {changeOpacity, makeStyleFromTheme} from 'mattermost-redux/utils/theme_ut
 import {trackEvent} from 'actions/diagnostics_actions.jsx';
 import * as PostUtils from 'utils/post_utils.jsx';
 
-import InfiniteScroll from '../../components/InfiniteScroll';
+import InfiniteScroll from '../InfiniteScroll';
 
 import './Categories.scss';
 

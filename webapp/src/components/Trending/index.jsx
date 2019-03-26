@@ -11,7 +11,7 @@ import {
     saveSearchScrollPosition,
 } from 'mattermost-redux/actions/gifs';
 
-import SearchGrid from '../../components/SearchGrid';
+import SearchGrid from '../SearchGrid';
 
 const mapDispatchToProps = ({
     searchCategory,

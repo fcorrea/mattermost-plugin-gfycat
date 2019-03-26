@@ -1,14 +1,16 @@
 import React from 'react';
 
 
+import GfycatIcon from './components/svg/gfycat_icon.jsx';
+
+
 class Plugin {
     initialize(registry, store) {
-        registry.registerPostDropdownMenuAction(
-            "Gfycat",
+        registry.registerEmojiPickerTabAction(
+            <GfycatIcon />,
             () => {
                 alert("Hello World!");
             },
-            () => { return true; },
         );
     }
 }

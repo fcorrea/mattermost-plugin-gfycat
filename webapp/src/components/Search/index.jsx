@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 import {searchIfNeededInitial, searchGfycat} from 'mattermost-redux/actions/gifs';
 
-import SearchGrid from '../../components/SearchGrid';
+import SearchGrid from '../SearchGrid';
 
 function mapStateToProps(state) {
     return {
