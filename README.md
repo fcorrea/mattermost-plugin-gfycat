@@ -1,4 +1,4 @@
-# mattermost-plugin-gyfcat
+# mattermost-plugin-gfycat
 
 This is a [Mattermost](https://github.com/mattermost) plugin that integrates Gyfcat gifs into the Emoji picker.
 
