@@ -10,7 +10,7 @@ class Plugin {
         registry.registerEmojiPickerTabAction(
             <GfycatIcon />,
             <GifPicker
-              onGifClick={this.props.onGifClick}
+              onGifClick={() => {}}
             />,
         );
     }
