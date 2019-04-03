@@ -1,10 +1,10 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-import {Client4} from 'mattermost-redux/client';
+import { Client4 } from 'mattermost-redux/client';
 
 // Backported from webapp/utils/post_utils.js
-export function getImageSrc(src, hasImageProxy) {
+export default function getImageSrc(src, hasImageProxy) {
     if (!src) {
         return src;
     }
