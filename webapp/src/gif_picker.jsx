@@ -72,17 +72,35 @@ export default class GifPicker extends React.Component {
     render() {
         const {action} = this.state;
         let component;
-        switch (action) {
-        case 'reactions':
-            component = (
-                <Categories
-                    appProps={appProps}
-                    onTrending={this.handleTrending}
-                    onSearch={this.handleSearch}
-                />
-            );
-            break;
-        case 'search':
+        // switch (action) {
+        // case 'reactions':
+        //     component = (
+        //         <Categories
+        //             appProps={appProps}
+        //             onTrending={this.handleTrending}
+        //             onSearch={this.handleSearch}
+        //         />
+        //     );
+        //     break;
+        // case 'search':
+        //     component = (
+        //         <Search
+        //             appProps={appProps}
+        //             onCategories={this.handleCategories}
+        //             handleItemClick={this.handleItemClick}
+        //         />
+        //     );
+        //     break;
+        // case 'trending':
+        //     component = (
+        //         <Trending
+        //             appProps={appProps}
+        //             onCategories={this.handleCategories}
+        //             handleItemClick={this.handleItemClick}
+        //         />
+        //     );
+        //     break;
+        // }
             component = (
                 <Search
                     appProps={appProps}
@@ -90,17 +108,6 @@ export default class GifPicker extends React.Component {
                     handleItemClick={this.handleItemClick}
                 />
             );
-            break;
-        case 'trending':
-            component = (
-                <Trending
-                    appProps={appProps}
-                    onCategories={this.handleCategories}
-                    handleItemClick={this.handleItemClick}
-                />
-            );
-            break;
-        }
         return (
             <div>
                 <App
